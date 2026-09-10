@@ -1,0 +1,10 @@
+{
+  "name": "Weather",
+  "description": "Real-time alerts, accurate 5-day hourly forecasts, glanceable home screen widgets, and offline caching.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

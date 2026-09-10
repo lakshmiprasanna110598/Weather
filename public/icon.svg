@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)" />
+
+  <!-- Weather icon container with safe-zone margin for maskable compliance -->
+  <g filter="url(#dropShadow)">
+    <!-- Sun -->
+    <circle cx="210" cy="200" r="82" fill="url(#sunGrad)" />
+    
+    <!-- Sun Rays -->
+    <g stroke="url(#sunGrad)" stroke-width="10" stroke-linecap="round" opacity="0.9">
+      <line x1="210" y1="92" x2="210" y2="70" />
+      <line x1="210" y1="308" x2="210" y2="330" />
+      <line x1="102" y1="200" x2="80" y2="200" />
+      <line x1="318" y1="200" x2="340" y2="200" />
+      <line x1="134" y1="124" x2="118" y2="108" />
+      <line x1="286" y1="276" x2="302" y2="292" />
+      <line x1="134" y1="276" x2="118" y2="292" />
+      <line x1="286" y1="124" x2="302" y2="108" />
+    </g>
+
+    <!-- Cloud -->
+    <path d="M370 340 H180 C146.86 340 120 313.14 120 280 C120 248.86 143.7 223.28 174.1 220.4 C184.2 173.3 226.4 138 276.5 138 C324.2 138 365 170.8 376.5 215.7 C403.4 219.7 424 242.9 424 271 C424 309.1 399.8 340 370 340 Z" fill="url(#cloudGrad)" />
+    
+    <!-- Lightning Bolt / Alert Accent -->
+    <polygon points="266,336 246,396 276,396 256,448 300,380 274,380 288,336" fill="#fbbf24" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round" />
+  </g>
+</svg>
